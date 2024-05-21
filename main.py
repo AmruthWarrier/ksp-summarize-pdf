@@ -72,6 +72,10 @@ def summarize_pdf(pdf_path):
         
     return "\n".join(summaries)
 
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({"message": "hello"}), 200
+
 @app.route('/summarize_pdf', methods=['POST'])
 def summarize_pdf_endpoint():
     if 'file' not in request.files:
@@ -90,5 +94,4 @@ def summarize_pdf_endpoint():
     else:
         return jsonify({"error": "Failed to summarize PDF"}),500
 
-if __name__ == '__main__':
-    app.run(debug=True)
+app.run(host='0.0.0.0', port=5000,debug=True)
