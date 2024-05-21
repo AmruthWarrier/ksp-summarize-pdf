@@ -88,4 +88,7 @@ def summarize_pdf_endpoint():
     if summary:
         return jsonify({"summary": summary}), 200
     else:
-        return jsonify({"error": "Failed to summarize PDF"}), 500
+        return jsonify({"error": "Failed to summarize PDF"}),500
+
+if __name__ == '_main_':
+    app.run(debug=True)
