@@ -12,7 +12,7 @@ import json
 import openai
 
 summarizer = pipeline("summarization", model="Falconsai/text_summarization")
-
+app = Flask(__name__)
 def split_text_into_chunks(text, max_chunk_length=512):
     """
     Splits the input text into smaller chunks.
