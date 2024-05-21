@@ -14,3 +14,4 @@ beautifulsoup4
 openai
 scipy==1.12.0
 tensorflow
+flask_cors

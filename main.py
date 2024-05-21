@@ -10,9 +10,14 @@ from textblob import TextBlob
 from bs4 import BeautifulSoup
 import json
 import openai
+from flask_cors import CORS
+
+
+app = Flask(__name__)
+CORS(app)
 
 summarizer = pipeline("summarization", model="Falconsai/text_summarization")
-app = Flask(__name__)
+
 def split_text_into_chunks(text, max_chunk_length=512):
     """
     Splits the input text into smaller chunks.
