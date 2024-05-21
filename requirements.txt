@@ -1,0 +1,9 @@
+Flask
+PyPDF2
+gensim==4.3.2
+requests
+transformers
+google
+textblob
+beautifulsoup4
+openai
